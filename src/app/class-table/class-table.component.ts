@@ -34,6 +34,11 @@ export class ClassTableComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  deleteFirstClass() {
+    if (!this.classes.length) return;
+    this.classes.shift();
+  }
+
   whereIsRon = (classes: WizardClass[]) => {
     const result = classes.filter((cls) =>
       cls.students.find((wizard) => wizard.name == 'Ron')
