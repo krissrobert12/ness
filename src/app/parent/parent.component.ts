@@ -11,4 +11,8 @@ export class ParentComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  taskForChild2 = () => {
+    console.log('Pressed');
+  };
 }
