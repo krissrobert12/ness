@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WizardClass } from '../wizard-class';
 
 const data = [
   {
@@ -24,11 +25,7 @@ const data = [
   styleUrls: ['./class-table.component.scss'],
 })
 export class ClassTableComponent implements OnInit {
-  classes: {
-    name: string;
-    students: { name: string }[];
-    teachers: { name: string }[];
-  }[];
+  classes: WizardClass[];
 
   constructor() {
     this.classes = data;
