@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClassesService } from '../classes.service';
 import { Wizard } from '../wizard';
 import { WizardClass } from '../wizard-class';
 
@@ -36,10 +37,10 @@ export class ClassTableComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  deleteFirstClass() {
+  deleteFirstClass = () => {
     if (!this.classes.length) return;
     this.classes.shift();
-  }
+  };
 
   whereIsRon = (classes: WizardClass[]) => {
     const result = classes.filter((cls) =>
