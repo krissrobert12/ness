@@ -23,7 +23,7 @@
 
   </tr> -->
 
-  <tr *ngFor="let class of format(classes)">
+  <tr *ngFor="let class of format(classes)" [class.green]="isGreen">
   
     <td>
       {{ class.name }}

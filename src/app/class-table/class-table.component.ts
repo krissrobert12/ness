@@ -27,9 +27,11 @@ const data = [
 })
 export class ClassTableComponent implements OnInit {
   classes: WizardClass[];
+  isGreen: boolean;
 
   constructor() {
     this.classes = data;
+    this.isGreen = true;
   }
 
   ngOnInit(): void {}
