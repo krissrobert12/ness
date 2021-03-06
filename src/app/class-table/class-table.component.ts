@@ -46,7 +46,17 @@ export class ClassTableComponent implements OnInit {
     return classes.filter((cls) => cls.teachers.length);
   };
 
+  studentsUpper = (classes: WizardClass[]) => {
+    return classes.map((cls) => {
+      const newStudents = cls.students.map((student) => {
+        return { ...student, name: student.name.toUpperCase() };
+      });
+
+      return { ...cls, students: newStudents };
+    });
+  };
+
   format = (classes: WizardClass[]) => {
-    return this.filterTeachers(classes);
+    return this.studentsUpper(this.filterTeachers(classes));
   };
 }
