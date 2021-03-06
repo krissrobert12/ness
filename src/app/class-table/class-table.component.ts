@@ -32,4 +32,12 @@ export class ClassTableComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  whereIsRon = (classes: WizardClass[]) => {
+    const result = classes.filter((cls) =>
+      cls.students.find((wizard) => wizard.name == 'Ron')
+    );
+
+    return result;
+  };
 }
