@@ -1,0 +1,24 @@
+<h1>Class Table</h1>
+
+<table>
+  <tr>
+    <td>Class name</td>
+    <td>Class students</td>
+  </tr>
+  
+  <tr *ngFor="let class of classes">
+
+    <td *ngIf="class.teachers.length">
+      {{ class.name }}
+    </td>
+
+    <td *ngIf="class.teachers.length">
+      <ul>
+        <li *ngFor="let student of class.students">
+          {{ student.name }}
+        </li>
+      </ul>
+    </td>
+
+  </tr>
+</table>
