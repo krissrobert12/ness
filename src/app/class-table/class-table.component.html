@@ -5,8 +5,9 @@
     <td>Class name</td>
     <td>Class students</td>
   </tr>
-  
-  <tr *ngFor="let class of classes">
+
+  <!-- REFORMAT
+    <tr *ngFor="let class of classes">
 
     <td *ngIf="class.teachers.length">
       {{ class.name }}
@@ -20,5 +21,21 @@
       </ul>
     </td>
 
+  </tr> -->
+
+  <tr *ngFor="let class of format(classes)">
+  
+    <td>
+      {{ class.name }}
+    </td>
+  
+    <td>
+      <ul>
+        <li *ngFor="let student of class.students">
+          {{ student.name }}
+        </li>
+      </ul>
+    </td>
+  
   </tr>
 </table>

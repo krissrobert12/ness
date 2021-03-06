@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Wizard } from '../wizard';
 import { WizardClass } from '../wizard-class';
 
 const data = [
@@ -39,5 +40,13 @@ export class ClassTableComponent implements OnInit {
     );
 
     return result;
+  };
+
+  filterTeachers = (classes: WizardClass[]) => {
+    return classes.filter((cls) => cls.teachers.length);
+  };
+
+  format = (classes: WizardClass[]) => {
+    return this.filterTeachers(classes);
   };
 }
