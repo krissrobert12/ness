@@ -14,13 +14,10 @@ import { SecondChildComponent } from './second-child/second-child.component';
     ClassTableComponent,
     ParentComponent,
     FirstChildComponent,
-    SecondChildComponent
+    SecondChildComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
